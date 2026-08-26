@@ -11,6 +11,8 @@ Před načtením do datového modelu proběhly v Power Query a v samotném Power
 4. Ruční sestavení referenční tabulky Countries (48 zemí) s přiřazením kontinentu ke každému IOC kódu, pro potřeby mapy a hierarchie.
 5. Vytvoření samostatné tabulky Grandslam Winners s dotacemi vítězů grandslamů, propojené na hráče přes winner_id (spolehlivější než párování podle jména).
 
+Datový rozsah pokrývá roky 2005–2025, celkem 1 364 odehraných finále na čtyřech typech povrchu (Hard 755, Clay 454, Grass 137, Carpet 18).
+
 # Struktura reportu
 ## Stránka 1 — Úvodní stránka
 Titulní stránka s názvem projektu, logem ATP Tour a čtyřmi navigačními tlačítky (Úvodní stránka, Přehled, Hráči, Grandslamy) pro přechod na jednotlivé stránky reportu.
