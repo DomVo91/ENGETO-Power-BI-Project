@@ -5,8 +5,8 @@ Zdrojová data pocházejí z výsledků mužského okruhu ATP Tour za období 20
 
 ## Příprava a čištění dat
 Před načtením do datového modelu proběhly v Power Query a v samotném Power BI následující úpravy:
-●	Odstranění duplicitních řádků ve zdrojové tabulce turnajů (stejný turnaj/datum/vítěz zapsaný vícekrát).
-●	Rozdělení jedné široké tabulky na samostatnou faktovou tabulku Turnaje a dimenzní tabulku Players — duplikací dotazu v Power Query, ponecháním pouze sloupců vztahujících se k hráči (jméno, ruka, ID) a odstraněním duplicit podle ID hráče.
-●	Sjednocení typu klíčových sloupců (winner_id jako celé číslo) na obou stranách vazeb, aby šlo vytvořit korektní relace.
-●	Ruční sestavení referenční tabulky Countries (48 zemí) s přiřazením kontinentu ke každému IOC kódu, pro potřeby mapy a hierarchie.
-●	Vytvoření samostatné tabulky Grandslam Winners s dotacemi vítězů grandslamů, propojené na hráče přes winner_id (spolehlivější než párování podle jména).
+1. Odstranění duplicitních řádků ve zdrojové tabulce turnajů (stejný turnaj/datum/vítěz zapsaný vícekrát).
+2. Rozdělení jedné široké tabulky na samostatnou faktovou tabulku Turnaje a dimenzní tabulku Players — duplikací dotazu v Power Query, ponecháním pouze sloupců vztahujících se k hráči (jméno, ruka, ID) a odstraněním duplicit podle ID hráče.
+3. Sjednocení typu klíčových sloupců (winner_id jako celé číslo) na obou stranách vazeb, aby šlo vytvořit korektní relace.
+4. Ruční sestavení referenční tabulky Countries (48 zemí) s přiřazením kontinentu ke každému IOC kódu, pro potřeby mapy a hierarchie.
+5. Vytvoření samostatné tabulky Grandslam Winners s dotacemi vítězů grandslamů, propojené na hráče přes winner_id (spolehlivější než párování podle jména).
