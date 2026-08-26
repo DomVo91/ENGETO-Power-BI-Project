@@ -10,3 +10,13 @@ Před načtením do datového modelu proběhly v Power Query a v samotném Power
 3. Sjednocení typu klíčových sloupců (winner_id jako celé číslo) na obou stranách vazeb, aby šlo vytvořit korektní relace.
 4. Ruční sestavení referenční tabulky Countries (48 zemí) s přiřazením kontinentu ke každému IOC kódu, pro potřeby mapy a hierarchie.
 5. Vytvoření samostatné tabulky Grandslam Winners s dotacemi vítězů grandslamů, propojené na hráče přes winner_id (spolehlivější než párování podle jména).
+
+# Struktura reportu
+## Stránka 1 — Úvodní stránka
+Titulní stránka s názvem projektu, logem ATP Tour a čtyřmi navigačními tlačítky (Úvodní stránka, Přehled, Hráči, Grandslamy) pro přechod na jednotlivé stránky reportu.
+## Stránka 2 — Přehled
+KPI karty (celkem titulů, unikátní vítězové, průměrný věk výherce), přehled počtu titulů podle zemí, donut graf rozdělení titulů podle povrchu (Hard/Clay/Grass/Carpet) a mapa vyhraných turnajů podle zemí. Stránka obsahuje slicer a dvě záložky (bookmarks) — Přehled a Mapa — pro přepínání mezi standardním pohledem a zvětšenou mapou.
+## Stránka 3 — Hráči
+Průměrné pořadí v žebříčku a průměrný věk hráčů jako KPI karty, mapa/dlaždice kontinentů, žebříček top hráčů podle počtu titulů (pruhový graf), donut graf podle dominantní ruky (pravák/levák) a graf vývoje průměrného, minimálního a maximálního věku vítěze v čase (2005–2025). Obsahuje slicer pro filtrování.
+## Stránka 4 — Grandslamy
+Karty s průměrnou dotací podle kategorie grandslamu (Australian Open, French Open, US Open, Wimbledon), donut graf podílu titulů podle hráče a maticová tabulka s vývojem dotací jednotlivých grandslamů podle roku (2005–2025) včetně součtových řádků. Obsahuje slicery pro filtrování.
