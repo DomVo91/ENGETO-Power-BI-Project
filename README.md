@@ -3,3 +3,10 @@ Cílem projektu je interaktivní analýza mužského tenisového okruhu ATP Tour
 
 Zdrojová data pocházejí z výsledků mužského okruhu ATP Tour za období 2005–2025 (výsledky finále jednotlivých turnajů) (zdroj: veřejně dostupný dataset ATP zápasů (2005–2025), stažený z Kaggle.com) , doplněná o referenční přehled počtu turnajů v jednotlivých letech (zdroj: tenisportal.cz/kalendar/atp) a ručně sestavenou tabulku zemí. Do modelu byly načteny čtyři samostatné zdrojové tabulky:
 
+## Příprava a čištění dat
+Před načtením do datového modelu proběhly v Power Query a v samotném Power BI následující úpravy:
+●	Odstranění duplicitních řádků ve zdrojové tabulce turnajů (stejný turnaj/datum/vítěz zapsaný vícekrát).
+●	Rozdělení jedné široké tabulky na samostatnou faktovou tabulku Turnaje a dimenzní tabulku Players — duplikací dotazu v Power Query, ponecháním pouze sloupců vztahujících se k hráči (jméno, ruka, ID) a odstraněním duplicit podle ID hráče.
+●	Sjednocení typu klíčových sloupců (winner_id jako celé číslo) na obou stranách vazeb, aby šlo vytvořit korektní relace.
+●	Ruční sestavení referenční tabulky Countries (48 zemí) s přiřazením kontinentu ke každému IOC kódu, pro potřeby mapy a hierarchie.
+●	Vytvoření samostatné tabulky Grandslam Winners s dotacemi vítězů grandslamů, propojené na hráče přes winner_id (spolehlivější než párování podle jména).
